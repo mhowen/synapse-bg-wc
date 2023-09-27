@@ -1,0 +1,30 @@
+{
+  "name": "synapse-bg-wc",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/synapse-bg-wc.umd.cjs",
+  "module": "./dist/synapse-bg-wc.js",
+  "exports": {
+    ".": {
+      "import": "./dist/synapse-bg-wc.js",
+      "require": "./dist/synapse-bg-wc.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/lodash.uniqueid": "^4.0.7",
+    "path": "^0.12.7",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "colorjs.io": "^0.4.5",
+    "lodash.uniqueid": "^4.0.1"
+  }
+}
