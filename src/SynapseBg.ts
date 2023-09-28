@@ -50,7 +50,7 @@ export default class SynapseBg extends HTMLElement {
     canvas {
       position: ${hasContainer ? 'absolute' : 'fixed' };
       top: ${hasContainer ? this.parentElement?.offsetTop || 0 : 0};
-      z-index: -999;
+      z-index: ${hasContainer ? this.parentElement?.style.zIndex : -999};
     }`;
     
     shadow.append(shadowStyle, this.networkLayer.canvas, this.signalLayer.canvas);
