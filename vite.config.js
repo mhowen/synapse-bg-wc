@@ -6,8 +6,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
       name: 'SynapseBg',
-      fileName: 'synapse-bg-wc',
+      fileName: 'synapse-bg-wc', // filename of bundles -- change if you like
     },
-    outDir: '../builds/synapse-bg-wc'
+    // outDir: 'dist', // output directory relative to project root -- change if you like
   }
 });

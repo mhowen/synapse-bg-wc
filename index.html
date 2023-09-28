@@ -7,25 +7,29 @@
   </head>
   <body>
     <script type="module" src="/src/main.ts"></script>
-    
-    <h1>Arbitrary content</h1>
-    <h2>More arbitrary content</h2>
-    <h3>Still more arbitrary content</h3>
 
-    <div style="
-      width: 750px;
-      aspect-ratio: 1;
-      outline: 1px dashed black;"
-    >
-    <synapse-bg
-      color="hotpink"
-      nodes="10"
-      speed-scale="2"
-      tracer-scale="6"
-    ></synapse-bg>
+    <h1>&lt;synapse-bg&gt; nested in &lt;body&gt; fills viewport</h1>
+      
+      <synapse-bg
+        color="rebeccapurple"
+        nodes="5"
+        tracer-scale="5"
+      ></synapse-bg>  
 
-  </div>
-  
-  
+      <div style="
+        background-color: #ffffff;
+        width: 750px;
+        aspect-ratio: 1;
+        outline: 1px dashed black;"
+      >
+        <h2>&lt;synapse-bg&gt; nested in &lt;div&gt; sizes to fill</h2>
+
+        <synapse-bg
+          color="hotpink"
+          nodes="10"
+          speed-scale="2"
+          tracer-scale="5"
+        ></synapse-bg>
+    </div>
   </body>
 </html>
