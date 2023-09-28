@@ -32,7 +32,7 @@ export default class SynapseBg extends HTMLElement {
   constructor() {
     super(); // establish prototype chain
 
-    const shadow = this.attachShadow({ mode: 'open' });
+    const shadow = this.attachShadow({ mode: 'closed' });
     
     this.networkLayer = new SynapseBgLayer();
     this.signalLayer = new SynapseBgLayer();
