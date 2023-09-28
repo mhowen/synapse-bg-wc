@@ -45,16 +45,24 @@ export default class SynapseBg extends HTMLElement {
     const shadowStyle = document.createElement('style');
     const hasContainer = this.parentElement !== document.body;
 
-    // canvases fill their container or the viewport if the shadow root is in the body
+    // establish how much, if any, to offset vertical position based on parent's CSS positioning
+    let topVal = 0;
+    if (this.parentElement && this.parentElement !== document.body) {
+      const parentOffset = this.parentElement.getBoundingClientRect().top;
+      topVal = this.parentElement.offsetTop - parentOffset;
+    }
+
+    // canvases fill their container or the viewport if the shadow root is a direct child of document body
     shadowStyle.textContent = `
     canvas {
       position: ${hasContainer ? 'absolute' : 'fixed' };
-      top: ${this.parentElement?.offsetTop || 0}px;
+      top: ${topVal}px;
       z-index: ${hasContainer ? this.parentElement?.style.zIndex : -999};
     }`;
 
+    // append the style element and the two canvases to the Shadow DOM
     shadow.append(shadowStyle, this.networkLayer.canvas, this.signalLayer.canvas);
-    
+
     this.init();
   }
 
