@@ -3,13 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WC</title>
+    <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <script type="module" src="/src/main.ts"></script>
-
-    <h1>&lt;synapse-bg&gt; nested in &lt;body&gt; fills viewport</h1>
-      
+    <!-- Direct child of body; grows to fill document -->
       <synapse-bg
         color="rebeccapurple"
         nodes="5"
@@ -17,16 +14,12 @@
       ></synapse-bg>  
 
       <div style="
-        background-color: #f3f3f3;
-        position: absolute;
-        top: 10%;
-        right: 10%;
+        background-color: #f0f0f0;
         width: 30%;
         aspect-ratio: 1;
         outline: 1px dashed black;"
       >
-        <h2>&lt;synapse-bg&gt; nested in &lt;div&gt; sizes to fill</h2>
-
+      <!-- Direct child of some other containing element; grows to fill parent -->
         <synapse-bg
           color="hotpink"
           nodes="10"
