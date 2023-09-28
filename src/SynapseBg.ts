@@ -49,10 +49,10 @@ export default class SynapseBg extends HTMLElement {
     shadowStyle.textContent = `
     canvas {
       position: ${hasContainer ? 'absolute' : 'fixed' };
-      top: ${hasContainer ? this.parentElement?.offsetTop || 0 : 0};
+      top: ${this.parentElement?.offsetTop || 0}px;
       z-index: ${hasContainer ? this.parentElement?.style.zIndex : -999};
     }`;
-    
+
     shadow.append(shadowStyle, this.networkLayer.canvas, this.signalLayer.canvas);
     
     this.init();
