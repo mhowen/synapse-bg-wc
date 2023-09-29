@@ -2,17 +2,18 @@
 A performant and configurable background element that generates a network of connected nodes over which subtle, dynamic signal traversal is simulated.
 
 ## Installation
-### Building
-1. Clone repo: `git clone https://github.com/mhowen/synapse-bg-wc.git`
-2. cd into directory: `cd synapse-bg-wc/`
-3. Install dependencies: `npm install`
-4. Build: `npm run build` or `vite build`
+### From npm
+Run `npm install synapse-bg-wc` in your project directory, then follow one of the two registration procedures below.
 
-### Registering Component
-Include in your template or html:
+### Registering Component from JS/TS
+Import the module in client-side code or template file: `import 'synapse-bg-wc'`;
+
+### Registering Component in HTML
+Include this script element in your template or html:
 ```html
 <script type="module" src="<build directory>/synapse-bg-wc.js"></script>
 ```
+
 ## Usage
 
 ### As Custom Element
@@ -41,7 +42,7 @@ Optionally include any, all, or none of the configuration attributes in the elem
 
 ### Attribute Guide
 `color`: Defines base color of rendered entities
-- Can be any valid CSS \<color\> string in any common colorspace
+- Can be any valid CSS \<color\> keyword or string in any common colorspace, e.g. `darkslateblue`, `#483d8b`, `rgb(72 61 139)`
 - If omitted or invalid, defaults to black.
 
 `nodes`: Defines number of nodes generated for each network
