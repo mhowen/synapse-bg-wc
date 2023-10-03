@@ -1,6 +1,10 @@
 {
   "name": "synapse-bg-wc",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhowen/synapse-bg-wc.git"
+  },
   "type": "module",
   "files": ["dist"],
   "main": "./dist/synapse-bg-wc.umd.cjs",
